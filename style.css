@@ -1,47 +1,39 @@
 body{
-    /* I tried getting a custom background ill try in class */
-    /* background-size: cover;
-    background-repeat: no-repeat; */
     margin: 0;
-    background-color: rgb(106, 70, 0);
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.psdgraphics.com%2Ffile%2Fcasino-symbols-pattern.jpg&f=1&nofb=1&ipt=9b7eb0ca01310eb24706ac166c0dd6a312eb378cbafbc7fd403e10823ea2f8ae&ipo=images");
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-size: cover;
+    /* background-color: rgba(3, 94, 3, 0.855); */
     display: grid;
     grid-template-rows: 325px 1fr 350px 200px;
 }
 .dealer{
     display: flex;
+    margin: auto;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 .dealer-card-1{
-    margin: 15px 120px 50px 675px;
-    background-color: rgb(169, 2, 2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dealer-card-2{
-    margin: 15px 0px 50px -100px;
-    background-color: rgb(169, 2, 2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 .player{
     display: flex;
+    margin: auto;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
 
 }
 .player-card-1{
-    margin: 15px 120px 50px 675px;
-    background-color: rgb(169, 2, 2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    outline:dashed black;
+    height: 175px;
+    width: 125px;
 }
 .player-card-2{
-    margin: 15px 120px 50px -100px;
-    background-color: rgb(169, 2, 2);
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    outline:dashed black;
+    height: 175px;
+    width: 125px;
 }
 .hit-stand{
     display: flex;
@@ -50,22 +42,28 @@ body{
 }
 
 .chips{
-    margin: 10px 350px 0px 350px;
-    background-color: green;
+    background-color: rgb(0, 93, 0);
+    filter:opacity(50%);
+    color:white;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-div{
-    display:flex;
-    justify-content: space-between;
+    grid-column: span 1;
 }
 .hit{
-    margin: 0px 750px 0px 15px;
+    margin-right: 450px;
     font-size:50px;
+    display: flex;
 
 }
-.stay{
+.stand{
     font-size:50px;
-
+    display: flex;
+}
+.card{
+    height: 175px;
+    width: 125px;
+}
+.dealer-sum{
+    color:white;
 }
