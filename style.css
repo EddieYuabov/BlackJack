@@ -5,9 +5,10 @@ body{
     background-size: cover;
     display: grid;
     grid-template-columns: 6fr 1fr;
-    grid-template-rows: 325px 1fr 350px 50px 175px;
+    grid-template-rows: 325px 1fr 375px 20px 175px;
     margin: 0;
 }
+
 .dealer{
     display: flex;
     margin: auto;
@@ -21,26 +22,28 @@ body{
     color:white;
     background-color: black;
     filter:opacity(50%);
-
 }
+
 .player{
     display: flex;
     margin: auto;
     grid-gap: 5px;
     justify-content: center;
     align-items: center;
-
 }
+
 .player-card-1{
     outline:dashed black;
     height: 175px;
     width: 125px;
 }
+
 .player-card-2{
     outline:dashed black;
     height: 175px;
     width: 125px;
 }
+
 .hit-stand{
     display: flex;
     justify-content: center;
@@ -58,15 +61,17 @@ body{
 }
 .hit{
     margin-right: 450px;
-    font-size:50px;
+    font-size:35px;
     display: flex;
+    padding: 0px 20px 0px 20px;
 
 }
 .stand{
-    font-size:50px;
+    font-size:35px;
     display: flex;
+    padding: 0px 20px 0px 20px
 }
-.card{
+img{
     height: 175px;
     width: 125px;
 }
