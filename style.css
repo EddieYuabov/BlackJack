@@ -1,12 +1,12 @@
 body{
-    margin: 0;
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.psdgraphics.com%2Ffile%2Fcasino-symbols-pattern.jpg&f=1&nofb=1&ipt=9b7eb0ca01310eb24706ac166c0dd6a312eb378cbafbc7fd403e10823ea2f8ae&ipo=images");
     background-repeat: no-repeat;
     background-position: absolute;
     background-size: cover;
-    /* background-color: rgba(3, 94, 3, 0.855); */
     display: grid;
-    grid-template-rows: 325px 1fr 350px 200px;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: 325px 1fr 350px 50px 175px;
+    margin: 0;
 }
 .dealer{
     display: flex;
@@ -15,7 +15,13 @@ body{
     justify-content: center;
     align-items: center;
 }
-.dealer-card-1{
+.chips{
+    padding-left: 20px;
+    grid-row: span 4;
+    color:white;
+    background-color: black;
+    filter:opacity(50%);
+
 }
 .player{
     display: flex;
@@ -41,14 +47,14 @@ body{
     align-items: center;
 }
 
-.chips{
+.you-win{
     background-color: rgb(0, 93, 0);
     filter:opacity(50%);
     color:white;
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column: span 1;
+    grid-column: span 2;
 }
 .hit{
     margin-right: 450px;
