@@ -1,0 +1,71 @@
+body{
+    /* I tried getting a custom background ill try in class */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    margin: 0;
+    background-color: rgb(106, 70, 0);
+    display: grid;
+    grid-template-rows: 325px 1fr 350px 200px;
+}
+.dealer{
+    display: flex;
+}
+.dealer-card-1{
+    margin: 15px 120px 50px 675px;
+    background-color: rgb(169, 2, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dealer-card-2{
+    margin: 15px 0px 50px -100px;
+    background-color: rgb(169, 2, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.player{
+    display: flex;
+
+}
+.player-card-1{
+    margin: 15px 120px 50px 675px;
+    background-color: rgb(169, 2, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-card-2{
+    margin: 15px 120px 50px -100px;
+    background-color: rgb(169, 2, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.hit-stand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chips{
+    margin: 10px 350px 0px 350px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    display:flex;
+    justify-content: space-between;
+}
+.hit{
+    margin: 0px 750px 0px 15px;
+    font-size:50px;
+
+}
+.stay{
+    font-size:50px;
+
+}
