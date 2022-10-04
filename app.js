@@ -8,6 +8,7 @@ const firstPlayerCard = document.getElementById('p-card-1')
 const secondPlayerCard = document.getElementById('p-card-2')
 const winningCondition = 21
 let gameOver = 0
+let chips = document.getElementById('chips-display')
 
 // Cards
 const backOfCard =
@@ -122,6 +123,60 @@ secondPlayerCard.innerHTML = kingOfDiamonds
 firstDealerCard.innerHTML = backOfCard
 secondDealerCard.innerHTML = twoOfClovers
 
+const cards = [
+  aceOfHearts,
+  aceOfSpades,
+  aceOfDiamonds,
+  aceOfClovers,
+  twoOfHearts,
+  twoOfSpades,
+  twoOfDiamonds,
+  twoOfClovers,
+  threeOfHearts,
+  threeOfSpades,
+  threeOfDiamonds,
+  threeOfClovers,
+  fourOfHearts,
+  fourOfSpades,
+  fourOfDiamonds,
+  fourOfClovers,
+  fiveOfHearts,
+  fiveOfSpades,
+  fiveOfDiamonds,
+  fiveOfClovers,
+  sixOfHearts,
+  sixOfSpades,
+  sixOfDiamonds,
+  sixOfClovers,
+  sevenOfHearts,
+  sevenOfSpades,
+  sevenOfDiamonds,
+  sevenOfClovers,
+  eightOfHearts,
+  eightOfSpades,
+  eightOfDiamonds,
+  eightOfClovers,
+  nineOfHearts,
+  nineOfSpades,
+  nineOfDiamonds,
+  nineOfClovers,
+  tenOfHearts,
+  tenOfSpades,
+  tenOfDiamonds,
+  tenOfClovers,
+  jackOfHearts,
+  jackOfSpades,
+  jackOfDiamonds,
+  jackOfClovers,
+  queenOfHearts,
+  queenOfSpades,
+  queenOfDiamonds,
+  queenOfClovers,
+  kingOfHearts,
+  kingOfSpades,
+  kingOfDiamonds,
+  kingOfClovers
+]
 const lose = (sum) => {
   if (sum > winningCondition) {
     gameOver = 1

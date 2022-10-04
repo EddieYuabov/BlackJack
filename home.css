@@ -1,0 +1,23 @@
+body{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.psdgraphics.com%2Ffile%2Fcasino-symbols-pattern.jpg&f=1&nofb=1&ipt=9b7eb0ca01310eb24706ac166c0dd6a312eb378cbafbc7fd403e10823ea2f8ae&ipo=images");
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-size: cover;
+}
+h1{
+    color:white
+}
+.homepage{
+    text-align: center;
+    justify-content: center;
+}
+div{
+    text-align: center;
+    justify-content: center;
+}
+h1{
+    font-size: 150px;
+}
+a{
+    font-size: 100px;
+}

@@ -8,36 +8,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlackJack</title>
 </head>
-<body >
+<body>
     <section class="dealer">
+        <score class = dealer-sum><h2>Dealer: 0 </h2></score>
         <div class="dealer-card-1">
-            <!-- <score class = dealer-sum><h2>Score: </h2></score> -->
             <card class="card" id="d-card-1"></card>
         </div>
         <div class="dealer-card-2">
             <card class="card" id="d-card-2"></card>
         </div>
     </section>
-    <div class="chips">
-        <h2>Chips</h2>
-        <h2>more chips</h2>
-        <h2>even more chips</h2>
+    <div class="chips-section">
+        <chips class="chips">
+            <h2>Chips:&nbsp;$</h2>
+            <h2 id="chips-display">1000</h2>
+        </chips>
+        <img class="chip-img" src="https://i3.s3stores.com/images/BBL/preview_4d6a7c756d47363e852150635884e6e4.jpeg">
+        <img class="chip-img" src="https://i3.s3stores.com/images/BBL/preview_3a9e32a853c525e7b810e192573630b9.jpeg">
+        <img class="chip-img" src="https://i2.s3stores.com/images/BBL/preview_b4e1de110c75cdd589f4ff8f10ae40a9.jpeg">
+        <img class="chip-img" src="https://i3.s3stores.com/images/BBL/preview_8fc741fa69e3403dc65febeb69a9156b.jpeg">
+        <img class="chip-img" src="https://i2.s3stores.com/images/BBL/preview_ad8862fe24b47f67da4f56003d2553df.jpeg">
+        <img class="chip-img" src="https://i3.s3stores.com/images/BBL/preview_f0924615b09d861c935a88b5ac93e1ea.jpeg">
+        <deal>
+        <button class="deal">Deal</button>
+        </deal>
+        <amount id="amount-display">
+            <h2>Amount:&nbsp;$</h2>
+            <h2>0</h2>
+        </amount>
     </div>
     <div class="hit-stand">
         <button class="hit">Hit</button>
         <button class="stand">Stand</button>
     </div>
     <section class="player">
+        <score class = player-sum><h2>Player: 0</h2></score>
         <div class="player-card-1">
             <card class="card" id="p-card-1"></card>
         </div>
         <div class="player-card-2">
             <card class="card" id="p-card-2"></card>
-            <!-- <score class = player-sum><h2>Score: </h2></score> -->
         </div>
     </section>
     <div class="you-win">
         <h2>You win!</h2>
+        <button>Play Again</button>
+        <section class="return-link">
+            <a class="button" href="home.html">BackToHome</a>
+        </section>
     </div>
 </body>
 </html>

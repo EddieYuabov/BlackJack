@@ -4,11 +4,13 @@ body{
     background-position: absolute;
     background-size: cover;
     display: grid;
-    grid-template-columns: 6fr 1fr;
-    grid-template-rows: 325px 1fr 375px 20px 175px;
+    grid-template-columns:6fr 1fr;
+    grid-template-rows: 300px 1fr 400px 175px;
     margin: 0;
 }
-
+.return-link{
+display: inline;
+}
 .dealer{
     display: flex;
     margin: auto;
@@ -17,11 +19,34 @@ body{
     align-items: center;
 }
 .chips{
-    padding-left: 20px;
-    grid-row: span 4;
+    display: flex;
+    margin-left: 75px;
+}
+.chips-section{
+    grid-row: span 3;
     color:white;
-    background-color: black;
-    filter:opacity(50%);
+    background-color: rgb(0, 0, 0,.5);
+    filter:opacity(100%);
+    justify-content: center;
+    align-items: center;
+}
+.deal{
+    margin: 75px 0px 0px 100px;
+    font-size:35px;
+    background-color: white;
+    cursor:pointer;
+}
+.chip-img{
+    border-radius: 130px;
+    margin-bottom: -44px;
+    margin-left: 15px;
+    height: 115px;
+    width: 115px;
+    cursor:pointer;
+}
+#amount-display{
+    display: flex;
+    margin-left: 75px;
 }
 
 .player{
@@ -36,7 +61,7 @@ body{
     outline:dashed black;
     height: 175px;
     width: 125px;
-}
+
 
 .player-card-2{
     outline:dashed black;
@@ -44,37 +69,43 @@ body{
     width: 125px;
 } */
 
-.hit-stand{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .you-win{
-    background-color: rgb(0, 93, 0);
-    filter:opacity(50%);
+    background-color: rgb(0, 93, 0,.5);
     color:white;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
     grid-column: span 2;
 }
+
+.hit-stand{
+    padding-left: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .hit{
-    margin-right: 450px;
     font-size:35px;
     display: flex;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 50px 0px 50px;
+    cursor:pointer;
 
 }
 .stand{
     font-size:35px;
     display: flex;
-    padding: 0px 20px 0px 20px
+    padding: 0px 50px 0px 50px;
+    cursor:pointer;
 }
 img{
+    border-radius: 10px;
     height: 175px;
     width: 125px;
 }
-.dealer-sum{
+score{
+    padding-right: 50px;
     color:white;
+    display:block;
+    grid-template-columns: span 2;
 }
