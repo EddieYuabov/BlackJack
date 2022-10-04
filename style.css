@@ -8,8 +8,11 @@ body{
     grid-template-rows: 300px 1fr 400px 175px;
     margin: 0;
 }
-.return-link{
+#return-link{
 display: inline;
+}
+#play-again{
+    cursor:pointer;
 }
 .dealer{
     display: flex;
@@ -108,4 +111,7 @@ score{
     color:white;
     display:block;
     grid-template-columns: span 2;
+}
+h2{
+    color:white
 }

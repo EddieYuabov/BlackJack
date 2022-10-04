@@ -8,7 +8,9 @@ const firstPlayerCard = document.getElementById('p-card-1')
 const secondPlayerCard = document.getElementById('p-card-2')
 const winningCondition = 21
 let gameOver = 0
-let chips = document.getElementById('chips-display')
+let deal = document.querySelector('.deal')
+let chipsTotal = document.getElementById('chips-display')
+let playAgain = document.querySelector('#play-again')
 
 // Cards
 const backOfCard =
@@ -118,11 +120,6 @@ const kingOfDiamonds =
 const kingOfClovers =
   "<img src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F12%2Ff7%2Fa4%2F12f7a4211bbbbae45ffa90de88e20b40.png&f=1&nofb=1&ipt=5d7db6c27c613be10d4d31fb2e14c6233c8a633e899105be6872d3340dcdf46c&ipo=images'>"
 
-firstPlayerCard.innerHTML = kingOfClovers
-secondPlayerCard.innerHTML = kingOfDiamonds
-firstDealerCard.innerHTML = backOfCard
-secondDealerCard.innerHTML = twoOfClovers
-
 const cards = [
   aceOfHearts,
   aceOfSpades,
@@ -177,8 +174,26 @@ const cards = [
   kingOfDiamonds,
   kingOfClovers
 ]
+const startPositions = [secondDealerCard, firstPlayerCard, secondPlayerCard]
+const randomCard1 = cards[Math.floor(Math.random() * 52)]
+const randomCard2 = cards[Math.floor(Math.random() * 52)]
+const randomCard3 = cards[Math.floor(Math.random() * 52)]
+
 const lose = (sum) => {
   if (sum > winningCondition) {
     gameOver = 1
   }
 }
+
+const startGame = () => {
+  firstDealerCard.innerHTML = backOfCard
+  secondDealerCard.innerHTML = randomCard1
+  firstPlayerCard.innerHTML = randomCard2
+  secondPlayerCard.innerHTML = randomCard3
+}
+const startOver = () => {
+  startGame()
+}
+
+deal.addEventListener('click', startGame)
+playAgain.addEventListener('click', startOver)
