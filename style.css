@@ -32,7 +32,7 @@ body{
     align-items: center;
 }
 
-.player-card-1{
+/* .player-card-1{
     outline:dashed black;
     height: 175px;
     width: 125px;
@@ -42,7 +42,7 @@ body{
     outline:dashed black;
     height: 175px;
     width: 125px;
-}
+} */
 
 .hit-stand{
     display: flex;

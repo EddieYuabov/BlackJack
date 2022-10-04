@@ -1,10 +1,17 @@
+//Global Variables
+
 const dealerCards = document.getElementsByClassName('dealer')
 const playerCards = document.getElementsByClassName('player')
 const firstDealerCard = document.getElementById('d-card-1')
 const secondDealerCard = document.getElementById('d-card-2')
+const firstPlayerCard = document.getElementById('p-card-1')
+const secondPlayerCard = document.getElementById('p-card-2')
+const winningCondition = 21
+let gameOver = 0
 
-// const aceOfHearts = "<img src = ''>"
 // Cards
+const backOfCard =
+  "<img src = 'https://opengameart.org/sites/default/files/card%20back%20red.png'>"
 const aceOfHearts =
   "<img src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F2c%2F8b%2F93%2F2c8b938ef31c8f61a74bfdcba4d165f0.png&f=1&nofb=1&ipt=834a95b4d71da3fdffce6b1a06413f32027ea8d834798fa867283ef10865506f&ipo=images'>"
 const aceOfSpades =
@@ -110,5 +117,13 @@ const kingOfDiamonds =
 const kingOfClovers =
   "<img src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F12%2Ff7%2Fa4%2F12f7a4211bbbbae45ffa90de88e20b40.png&f=1&nofb=1&ipt=5d7db6c27c613be10d4d31fb2e14c6233c8a633e899105be6872d3340dcdf46c&ipo=images'>"
 
-secondDealerCard.innerHTML = kingOfClovers
-// firstDealerCard.innerHTML = nineOfHearts
+firstPlayerCard.innerHTML = kingOfClovers
+secondPlayerCard.innerHTML = kingOfDiamonds
+firstDealerCard.innerHTML = backOfCard
+secondDealerCard.innerHTML = twoOfClovers
+
+const lose = (sum) => {
+  if (sum > winningCondition) {
+    gameOver = 1
+  }
+}
