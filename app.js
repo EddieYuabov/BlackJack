@@ -252,15 +252,21 @@ const startOver = () => {
   secondDealerCard.innerHTML = ' '
   firstPlayerCard.innerHTML = ' '
   secondPlayerCard.innerHTML = ' '
+  extraPlayerCard.innerHTML = ' '
   randomCard1 = cards[Math.floor(Math.random() * 52)]
   randomCard2 = cards[Math.floor(Math.random() * 52)]
   randomCard3 = cards[Math.floor(Math.random() * 52)]
+  randomCard4 = cards[Math.floor(Math.random() * 52)]
+  randomCard5 = cards[Math.floor(Math.random() * 52)]
 }
 const works = () => {
   console.log('works')
 }
 const hitMe = () => {
   extraPlayerCard.innerHTML = randomCard4
+}
+const standClicked = () => {
+  firstDealerCard.innerHTML = randomCard5
 }
 
 deal.addEventListener('click', startGame)
@@ -272,4 +278,4 @@ twentyFiveChip.addEventListener('click', twentyFiveChipListener)
 fiftyChip.addEventListener('click', fiftyChipListener)
 hundredChip.addEventListener('click', hundredChipListener)
 hit.addEventListener('click', hitMe)
-stand.addEventListener('click', works)
+stand.addEventListener('click', standClicked)
