@@ -1,8 +1,8 @@
 # Eddie's BlackJack
 
-#### [Trello](https://trello.com/b/3fYI1fAz/eddies-blackjack-project)
+#### [My Trello Board](https://trello.com/b/3fYI1fAz/eddies-blackjack-project)
 
-![Picture](https://www.thesportsbank.net/wp-content/uploads/2020/04/BLACK-JACK.jpg)
+![Screenshot](BlackJackSS.png)
 
 ## Status
 

@@ -24,7 +24,7 @@ let playAgain = document.querySelector('#play-again')
 const hit = document.querySelector('.hit')
 const stand = document.querySelector('.stand')
 let dealerSum = document.getElementsByClassName('dealer-sum')
-let playerSum = document.getElementsByClassName('player-sum')
+let playerSum = document.querySelector('.player-sum')
 
 // Cards
 const backOfCard =
@@ -241,25 +241,26 @@ const lose = (sum) => {
     gameOver = 1
   }
 }
-const scoreDisplay = () => {
+const scoreDisplayAce = () => {
   let score = 0
   if (
-    (firstPlayerCard.innerHTML =
-      aceOfHearts || aceOfSpades || aceOfDiamonds || aceOfClovers)
+    (randomCard1 = aceOfHearts || aceOfClovers || aceOfDiamonds || aceOfSpades)
   ) {
     score += 11
-    playerSum.innerText = score
+    playerSum.innerHTML = score
   }
 }
+
 const startGame = () => {
   amountDisplay.innerText = 0
   firstDealerCard.innerHTML = backOfCard
   secondDealerCard.innerHTML = randomCard1
   firstPlayerCard.innerHTML = randomCard2
   secondPlayerCard.innerHTML = randomCard3
-  scoreDisplay()
+  scoreDisplayAce()
 }
 const startOver = () => {
+  amount = 0
   firstDealerCard.innerHTML = ' '
   secondDealerCard.innerHTML = ' '
   firstPlayerCard.innerHTML = ' '
