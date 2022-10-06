@@ -23,6 +23,8 @@ let chipsTotal = document.getElementById('chips-display')
 let playAgain = document.querySelector('#play-again')
 const hit = document.querySelector('.hit')
 const stand = document.querySelector('.stand')
+let dealerSum = document.getElementsByClassName('dealer-sum')
+let playerSum = document.getElementsByClassName('player-sum')
 
 // Cards
 const backOfCard =
@@ -239,13 +241,23 @@ const lose = (sum) => {
     gameOver = 1
   }
 }
-
+const scoreDisplay = () => {
+  let score = 0
+  if (
+    (firstPlayerCard.innerHTML =
+      aceOfHearts || aceOfSpades || aceOfDiamonds || aceOfClovers)
+  ) {
+    score += 11
+    playerSum.innerText = score
+  }
+}
 const startGame = () => {
   amountDisplay.innerText = 0
   firstDealerCard.innerHTML = backOfCard
   secondDealerCard.innerHTML = randomCard1
   firstPlayerCard.innerHTML = randomCard2
   secondPlayerCard.innerHTML = randomCard3
+  scoreDisplay()
 }
 const startOver = () => {
   firstDealerCard.innerHTML = ' '
