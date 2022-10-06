@@ -20,6 +20,9 @@ let deal = document.querySelector('.deal')
 let chipsCount = 0
 let chipsTotal = document.getElementById('chips-display')
 let playAgain = document.querySelector('#play-again')
+const hit = document.querySelector('.hit')
+const stand = document.querySelector('.stand')
+const positionAddPlayerCard = document.body.children[3]
 
 // Cards
 const backOfCard =
@@ -188,27 +191,6 @@ let randomCard1 = cards[Math.floor(Math.random() * 52)]
 let randomCard2 = cards[Math.floor(Math.random() * 52)]
 let randomCard3 = cards[Math.floor(Math.random() * 52)]
 
-const lose = (sum) => {
-  if (sum > winningCondition) {
-    gameOver = 1
-  }
-}
-
-const startGame = () => {
-  firstDealerCard.innerHTML = backOfCard
-  secondDealerCard.innerHTML = randomCard1
-  firstPlayerCard.innerHTML = randomCard2
-  secondPlayerCard.innerHTML = randomCard3
-}
-const startOver = () => {
-  firstDealerCard.innerHTML = ' '
-  secondDealerCard.innerHTML = ' '
-  firstPlayerCard.innerHTML = ' '
-  secondPlayerCard.innerHTML = ' '
-  randomCard1 = cards[Math.floor(Math.random() * 52)]
-  randomCard2 = cards[Math.floor(Math.random() * 52)]
-  randomCard3 = cards[Math.floor(Math.random() * 52)]
-}
 const oneChipListener = () => {
   chipsCount = 1
   chipsTotal.innerHTML -= chipsCount
@@ -245,9 +227,35 @@ const hundredChipListener = () => {
   amount += 100
   amountDisplay.innerText = amount
 }
+const lose = (sum) => {
+  if (sum > winningCondition) {
+    gameOver = 1
+  }
+}
+
+const startGame = () => {
+  amountDisplay.innerText = 0
+  firstDealerCard.innerHTML = backOfCard
+  secondDealerCard.innerHTML = randomCard1
+  firstPlayerCard.innerHTML = randomCard2
+  secondPlayerCard.innerHTML = randomCard3
+}
+const startOver = () => {
+  firstDealerCard.innerHTML = ' '
+  secondDealerCard.innerHTML = ' '
+  firstPlayerCard.innerHTML = ' '
+  secondPlayerCard.innerHTML = ' '
+  randomCard1 = cards[Math.floor(Math.random() * 52)]
+  randomCard2 = cards[Math.floor(Math.random() * 52)]
+  randomCard3 = cards[Math.floor(Math.random() * 52)]
+}
 const works = () => {
   console.log('works')
 }
+const hitMe = () => {
+  document.createElement
+}
+
 deal.addEventListener('click', startGame)
 playAgain.addEventListener('click', startOver)
 oneChip.addEventListener('click', oneChipListener)
@@ -256,3 +264,5 @@ tenChip.addEventListener('click', tenChipListener)
 twentyFiveChip.addEventListener('click', twentyFiveChipListener)
 fiftyChip.addEventListener('click', fiftyChipListener)
 hundredChip.addEventListener('click', hundredChipListener)
+// hit.addEventListener('click', works)
+// stand.addEventListener('click', works)
