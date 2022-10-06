@@ -6,6 +6,7 @@ const firstDealerCard = document.getElementById('d-card-1')
 const secondDealerCard = document.getElementById('d-card-2')
 const firstPlayerCard = document.getElementById('p-card-1')
 const secondPlayerCard = document.getElementById('p-card-2')
+const extraPlayerCard = document.getElementById('p-card-3')
 const oneChip = document.querySelector('#one-chip')
 const fiveChip = document.querySelector('#five-chip')
 const tenChip = document.querySelector('#ten-chip')
@@ -22,7 +23,6 @@ let chipsTotal = document.getElementById('chips-display')
 let playAgain = document.querySelector('#play-again')
 const hit = document.querySelector('.hit')
 const stand = document.querySelector('.stand')
-const positionAddPlayerCard = document.body.children[3]
 
 // Cards
 const backOfCard =
@@ -187,9 +187,16 @@ const cards = [
   kingOfClovers
 ]
 const startPositions = [secondDealerCard, firstPlayerCard, secondPlayerCard]
+
 let randomCard1 = cards[Math.floor(Math.random() * 52)]
 let randomCard2 = cards[Math.floor(Math.random() * 52)]
 let randomCard3 = cards[Math.floor(Math.random() * 52)]
+let randomCard4 = cards[Math.floor(Math.random() * 52)]
+let randomCard5 = cards[Math.floor(Math.random() * 52)]
+let randomCard6 = cards[Math.floor(Math.random() * 52)]
+let randomCard7 = cards[Math.floor(Math.random() * 52)]
+let randomCard8 = cards[Math.floor(Math.random() * 52)]
+let randomCard9 = cards[Math.floor(Math.random() * 52)]
 
 const oneChipListener = () => {
   chipsCount = 1
@@ -253,7 +260,7 @@ const works = () => {
   console.log('works')
 }
 const hitMe = () => {
-  document.createElement
+  extraPlayerCard.innerHTML = randomCard4
 }
 
 deal.addEventListener('click', startGame)
@@ -264,5 +271,5 @@ tenChip.addEventListener('click', tenChipListener)
 twentyFiveChip.addEventListener('click', twentyFiveChipListener)
 fiftyChip.addEventListener('click', fiftyChipListener)
 hundredChip.addEventListener('click', hundredChipListener)
-// hit.addEventListener('click', works)
-// stand.addEventListener('click', works)
+hit.addEventListener('click', hitMe)
+stand.addEventListener('click', works)
