@@ -6,9 +6,18 @@ const firstDealerCard = document.getElementById('d-card-1')
 const secondDealerCard = document.getElementById('d-card-2')
 const firstPlayerCard = document.getElementById('p-card-1')
 const secondPlayerCard = document.getElementById('p-card-2')
+const oneChip = document.querySelector('#one-chip')
+const fiveChip = document.querySelector('#five-chip')
+const tenChip = document.querySelector('#ten-chip')
+const twentyFiveChip = document.querySelector('#twenty-five-chip')
+const fiftyChip = document.querySelector('#fifty-chip')
+const hundredChip = document.querySelector('#hundred-chip')
 const winningCondition = 21
 let gameOver = 0
+let amountDisplay = document.getElementById('amount')
+let amount = 0
 let deal = document.querySelector('.deal')
+let chipsCount = 0
 let chipsTotal = document.getElementById('chips-display')
 let playAgain = document.querySelector('#play-again')
 
@@ -175,9 +184,9 @@ const cards = [
   kingOfClovers
 ]
 const startPositions = [secondDealerCard, firstPlayerCard, secondPlayerCard]
-const randomCard1 = cards[Math.floor(Math.random() * 52)]
-const randomCard2 = cards[Math.floor(Math.random() * 52)]
-const randomCard3 = cards[Math.floor(Math.random() * 52)]
+let randomCard1 = cards[Math.floor(Math.random() * 52)]
+let randomCard2 = cards[Math.floor(Math.random() * 52)]
+let randomCard3 = cards[Math.floor(Math.random() * 52)]
 
 const lose = (sum) => {
   if (sum > winningCondition) {
@@ -192,8 +201,58 @@ const startGame = () => {
   secondPlayerCard.innerHTML = randomCard3
 }
 const startOver = () => {
-  startGame()
+  firstDealerCard.innerHTML = ' '
+  secondDealerCard.innerHTML = ' '
+  firstPlayerCard.innerHTML = ' '
+  secondPlayerCard.innerHTML = ' '
+  randomCard1 = cards[Math.floor(Math.random() * 52)]
+  randomCard2 = cards[Math.floor(Math.random() * 52)]
+  randomCard3 = cards[Math.floor(Math.random() * 52)]
 }
-
+const oneChipListener = () => {
+  chipsCount = 1
+  chipsTotal.innerHTML -= chipsCount
+  amount += 1
+  amountDisplay.innerText = amount
+}
+const fiveChipListener = () => {
+  chipsCount = 5
+  chipsTotal.innerHTML -= chipsCount
+  amount += 5
+  amountDisplay.innerText = amount
+}
+const tenChipListener = () => {
+  chipsCount = 10
+  chipsTotal.innerHTML -= chipsCount
+  amount += 10
+  amountDisplay.innerText = amount
+}
+const twentyFiveChipListener = () => {
+  chipsCount = 25
+  chipsTotal.innerHTML -= chipsCount
+  amount += 25
+  amountDisplay.innerText = amount
+}
+const fiftyChipListener = () => {
+  chipsCount = 50
+  chipsTotal.innerHTML -= chipsCount
+  amount += 50
+  amountDisplay.innerText = amount
+}
+const hundredChipListener = () => {
+  chipsCount = 100
+  chipsTotal.innerHTML -= chipsCount
+  amount += 100
+  amountDisplay.innerText = amount
+}
+const works = () => {
+  console.log('works')
+}
 deal.addEventListener('click', startGame)
 playAgain.addEventListener('click', startOver)
+oneChip.addEventListener('click', oneChipListener)
+fiveChip.addEventListener('click', fiveChipListener)
+tenChip.addEventListener('click', tenChipListener)
+twentyFiveChip.addEventListener('click', twentyFiveChipListener)
+fiftyChip.addEventListener('click', fiftyChipListener)
+hundredChip.addEventListener('click', hundredChipListener)
