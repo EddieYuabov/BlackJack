@@ -8,7 +8,23 @@ body{
     grid-template-rows: 300px 1fr 400px 175px;
     margin: 0;
 }
+#display-winner{
+    display: block;
+    font-size: 50px;
+    margin: 50px;
+}
+#play-again{
+    font-size: 40px;
+    display: block;
+    background-color:white;
+}
+.link{
+    margin-top: 55px;
+    font-size: 40px;
+    color:white;
+}
 #prompt-chips{
+    color: red;
     font-size: 20px;
     padding:10px;
     opacity: 1;

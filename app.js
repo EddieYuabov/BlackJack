@@ -4,6 +4,7 @@ const dealerCards = document.querySelector('.dealer')
 const playerCards = document.querySelector('.player')
 const firstDealerCard = document.getElementById('d-card-1')
 const secondDealerCard = document.getElementById('d-card-2')
+const extraDealerCard = document.getElementById('d-card-3')
 const firstPlayerCard = document.getElementById('p-card-1')
 const secondPlayerCard = document.getElementById('p-card-2')
 const extraPlayerCard = document.getElementById('p-card-3')
@@ -879,15 +880,15 @@ const standClicked = () => {
 }
 const winningCondition = () => {
   if (scorePlayer1 > winningNumber) {
-    displayWinner.innerText = 'Dealer Wins'
+    displayWinner.innerText = 'Dealer Wins!'
   } else if (scoreDealer1 > winningNumber) {
-    displayWinner.innerText = 'Player Wins'
+    displayWinner.innerText = 'Player Wins!'
   } else if (scorePlayer1 > scoreDealer1) {
-    displayWinner.innerText = 'Player Wins'
+    displayWinner.innerText = 'Player Wins!'
   } else if (scoreDealer1 > scorePlayer1) {
-    displayWinner.innerText = 'Dealer Wins'
+    displayWinner.innerText = 'Dealer Wins!'
   } else {
-    displayWinner.innerText = 'Game Drawed'
+    displayWinner.innerText = 'Game Drawed!'
   }
 }
 
