@@ -28,6 +28,13 @@ let playerSum = document.querySelector('.player-sum')
 let hitStand = document.querySelector('.hit-stand')
 let promptChips = document.querySelector('#prompt-chips')
 let chipsSection = document.querySelector('.chips-section')
+let winner = document.querySelector('.you-win')
+let scorePlayer1 = 0
+let scorePlayer2 = 0
+let scorePlayer3 = 0
+let scoreDealer1 = 0
+let scoreDealer2 = 0
+let scoreDealer3 = 0
 
 // Cards
 const backOfCard =
@@ -244,27 +251,353 @@ const lose = (sum) => {
     gameOver = 1
   }
 }
-const scoreDisplay = () => {
-  let score = 0
+const scoreDisplayPlayer1 = () => {
   if (
     randomCard2 === aceOfHearts ||
     randomCard2 === aceOfClovers ||
     randomCard2 === aceOfDiamonds ||
     randomCard2 === aceOfSpades
   ) {
-    score += 11
-    playerSum.innerHTML = score
+    scorePlayer1 += 11
+    playerSum.innerHTML = scorePlayer1
   } else if (
     randomCard2 === twoOfHearts ||
     randomCard2 === twoOfClovers ||
     randomCard2 === twoOfDiamonds ||
     randomCard2 === twoOfSpades
   ) {
-    score += 2
-    playerSum.innerHTML = score
+    scorePlayer1 += 2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === threeOfHearts ||
+    randomCard2 === threeOfClovers ||
+    randomCard2 === threeOfDiamonds ||
+    randomCard2 === threeOfSpades
+  ) {
+    scorePlayer1 += 3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === fourOfHearts ||
+    randomCard2 === fourOfClovers ||
+    randomCard2 === fourOfDiamonds ||
+    randomCard2 === fourOfSpades
+  ) {
+    scorePlayer1 += 4
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === fiveOfHearts ||
+    randomCard2 === fiveOfClovers ||
+    randomCard2 === fiveOfDiamonds ||
+    randomCard2 === fiveOfSpades
+  ) {
+    scorePlayer1 += 5
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === sixOfHearts ||
+    randomCard2 === sixOfClovers ||
+    randomCard2 === sixOfDiamonds ||
+    randomCard2 === sixOfSpades
+  ) {
+    scorePlayer1 += 6
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === sevenOfHearts ||
+    randomCard2 === sevenOfClovers ||
+    randomCard2 === sevenOfDiamonds ||
+    randomCard2 === sevenOfSpades
+  ) {
+    scorePlayer1 += 7
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === eightOfHearts ||
+    randomCard2 === eightOfClovers ||
+    randomCard2 === eightOfDiamonds ||
+    randomCard2 === eightOfSpades
+  ) {
+    scorePlayer1 += 8
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === nineOfHearts ||
+    randomCard2 === nineOfClovers ||
+    randomCard2 === nineOfDiamonds ||
+    randomCard2 === nineOfSpades
+  ) {
+    scorePlayer1 += 9
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === tenOfHearts ||
+    randomCard2 === tenOfClovers ||
+    randomCard2 === tenOfDiamonds ||
+    randomCard2 === tenOfSpades
+  ) {
+    scorePlayer1 += 10
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === jackOfHearts ||
+    randomCard2 === jackOfClovers ||
+    randomCard2 === jackOfDiamonds ||
+    randomCard2 === jackOfSpades
+  ) {
+    scorePlayer1 += 10
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === queenOfHearts ||
+    randomCard2 === queenOfClovers ||
+    randomCard2 === queenOfDiamonds ||
+    randomCard2 === queenOfSpades
+  ) {
+    scorePlayer1 += 10
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard2 === kingOfHearts ||
+    randomCard2 === kingOfClovers ||
+    randomCard2 === kingOfDiamonds ||
+    randomCard2 === kingOfSpades
+  ) {
+    scorePlayer1 += 10
+    playerSum.innerHTML = scorePlayer1
   }
 }
-
+const scoreDisplayPlayer2 = () => {
+  if (
+    randomCard3 === aceOfHearts ||
+    randomCard3 === aceOfClovers ||
+    randomCard3 === aceOfDiamonds ||
+    randomCard3 === aceOfSpades
+  ) {
+    scorePlayer2 += 11
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === twoOfHearts ||
+    randomCard3 === twoOfClovers ||
+    randomCard3 === twoOfDiamonds ||
+    randomCard3 === twoOfSpades
+  ) {
+    scorePlayer2 += 2
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === threeOfHearts ||
+    randomCard3 === threeOfClovers ||
+    randomCard3 === threeOfDiamonds ||
+    randomCard3 === threeOfSpades
+  ) {
+    scorePlayer2 += 3
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === fourOfHearts ||
+    randomCard3 === fourOfClovers ||
+    randomCard3 === fourOfDiamonds ||
+    randomCard3 === fourOfSpades
+  ) {
+    scorePlayer2 += 4
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === fiveOfHearts ||
+    randomCard3 === fiveOfClovers ||
+    randomCard3 === fiveOfDiamonds ||
+    randomCard3 === fiveOfSpades
+  ) {
+    scorePlayer2 += 5
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === sixOfHearts ||
+    randomCard3 === sixOfClovers ||
+    randomCard3 === sixOfDiamonds ||
+    randomCard3 === sixOfSpades
+  ) {
+    scorePlayer2 += 6
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === sevenOfHearts ||
+    randomCard3 === sevenOfClovers ||
+    randomCard3 === sevenOfDiamonds ||
+    randomCard3 === sevenOfSpades
+  ) {
+    scorePlayer2 += 7
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === eightOfHearts ||
+    randomCard3 === eightOfClovers ||
+    randomCard3 === eightOfDiamonds ||
+    randomCard3 === eightOfSpades
+  ) {
+    scorePlayer2 += 8
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === nineOfHearts ||
+    randomCard3 === nineOfClovers ||
+    randomCard3 === nineOfDiamonds ||
+    randomCard3 === nineOfSpades
+  ) {
+    scorePlayer2 += 9
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === tenOfHearts ||
+    randomCard3 === tenOfClovers ||
+    randomCard3 === tenOfDiamonds ||
+    randomCard3 === tenOfSpades
+  ) {
+    scorePlayer2 += 10
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === jackOfHearts ||
+    randomCard3 === jackOfClovers ||
+    randomCard3 === jackOfDiamonds ||
+    randomCard3 === jackOfSpades
+  ) {
+    scorePlayer2 += 10
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === queenOfHearts ||
+    randomCard3 === queenOfClovers ||
+    randomCard3 === queenOfDiamonds ||
+    randomCard3 === queenOfSpades
+  ) {
+    scorePlayer2 += 10
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard3 === kingOfHearts ||
+    randomCard3 === kingOfClovers ||
+    randomCard3 === kingOfDiamonds ||
+    randomCard3 === kingOfSpades
+  ) {
+    scorePlayer2 += 10
+    scorePlayer1 = scorePlayer1 + scorePlayer2
+    playerSum.innerHTML = scorePlayer1
+  }
+}
+const scoreDisplayPlayer3 = () => {
+  if (
+    randomCard4 === aceOfHearts ||
+    randomCard4 === aceOfClovers ||
+    randomCard4 === aceOfDiamonds ||
+    randomCard4 === aceOfSpades
+  ) {
+    scorePlayer3 += 11
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === twoOfHearts ||
+    randomCard4 === twoOfClovers ||
+    randomCard4 === twoOfDiamonds ||
+    randomCard4 === twoOfSpades
+  ) {
+    scorePlayer3 += 2
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === threeOfHearts ||
+    randomCard4 === threeOfClovers ||
+    randomCard4 === threeOfDiamonds ||
+    randomCard4 === threeOfSpades
+  ) {
+    scorePlayer3 += 3
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === fourOfHearts ||
+    randomCard4 === fourOfClovers ||
+    randomCard4 === fourOfDiamonds ||
+    randomCard4 === fourOfSpades
+  ) {
+    scorePlayer3 += 4
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === fiveOfHearts ||
+    randomCard4 === fiveOfClovers ||
+    randomCard4 === fiveOfDiamonds ||
+    randomCard4 === fiveOfSpades
+  ) {
+    scorePlayer3 += 5
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === sixOfHearts ||
+    randomCard4 === sixOfClovers ||
+    randomCard4 === sixOfDiamonds ||
+    randomCard4 === sixOfSpades
+  ) {
+    scorePlayer3 += 6
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === sevenOfHearts ||
+    randomCard4 === sevenOfClovers ||
+    randomCard4 === sevenOfDiamonds ||
+    randomCard4 === sevenOfSpades
+  ) {
+    scorePlayer3 += 7
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === eightOfHearts ||
+    randomCard4 === eightOfClovers ||
+    randomCard4 === eightOfDiamonds ||
+    randomCard4 === eightOfSpades
+  ) {
+    scorePlayer3 += 8
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === nineOfHearts ||
+    randomCard4 === nineOfClovers ||
+    randomCard4 === nineOfDiamonds ||
+    randomCard4 === nineOfSpades
+  ) {
+    scorePlayer3 += 9
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === tenOfHearts ||
+    randomCard4 === tenOfClovers ||
+    randomCard4 === tenOfDiamonds ||
+    randomCard4 === tenOfSpades
+  ) {
+    scorePlayer3 += 10
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === jackOfHearts ||
+    randomCard4 === jackOfClovers ||
+    randomCard4 === jackOfDiamonds ||
+    randomCard4 === jackOfSpades
+  ) {
+    scorePlayer3 += 10
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === queenOfHearts ||
+    randomCard4 === queenOfClovers ||
+    randomCard4 === queenOfDiamonds ||
+    randomCard4 === queenOfSpades
+  ) {
+    scorePlayer3 += 10
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  } else if (
+    randomCard4 === kingOfHearts ||
+    randomCard4 === kingOfClovers ||
+    randomCard4 === kingOfDiamonds ||
+    randomCard4 === kingOfSpades
+  ) {
+    scorePlayer3 += 10
+    scorePlayer1 = scorePlayer1 + scorePlayer3
+    playerSum.innerHTML = scorePlayer1
+  }
+}
 const startGame = () => {
   amountDisplay.innerText = 0
   firstDealerCard.innerHTML = backOfCard
@@ -275,16 +608,14 @@ const startGame = () => {
   dealerCards.style.opacity = 1
   playerCards.style.opacity = 1
   promptChips.style.opacity = 0
-  chipsSection = 0.5
-  scoreDisplay()
+  scoreDisplayPlayer1()
+  scoreDisplayPlayer2()
 }
 const startOver = () => {
   amount = 0
   hitStand.style.opacity = 0
   dealerCards.style.opacity = 0
   playerCards.style.opacity = 0
-  promptChips.style.opacity = 1
-  chipsSection = 1
   firstDealerCard.innerHTML = ' '
   secondDealerCard.innerHTML = ' '
   firstPlayerCard.innerHTML = ' '
@@ -301,9 +632,11 @@ const works = () => {
 }
 const hitMe = () => {
   extraPlayerCard.innerHTML = randomCard4
+  scoreDisplayPlayer3()
 }
 const standClicked = () => {
   firstDealerCard.innerHTML = randomCard5
+  winner.style.opacity = 1
 }
 
 deal.addEventListener('click', startGame)

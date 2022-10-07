@@ -25,12 +25,12 @@ body{
 .chips{
     display: flex;
     margin-left: 75px;
+    margin-top: 75px;
 }
 .chips-section{
     grid-row: span 3;
     color:white;
     background-color: rgb(0, 0, 0,.5);
-    opacity: 1;
     justify-content: center;
     align-items: center;
 }
@@ -79,6 +79,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 93, 0,0.5);
+    opacity: 0;
     color:white;
     grid-column: span 2;
 }
