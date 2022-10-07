@@ -25,7 +25,6 @@ body{
 .chips{
     display: flex;
     margin-left: 75px;
-    margin-top: 75px;
 }
 .chips-section{
     grid-row: span 3;
