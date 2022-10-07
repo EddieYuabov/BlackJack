@@ -1,7 +1,7 @@
 //Global Variables
 
-const dealerCards = document.getElementsByClassName('dealer')
-const playerCards = document.getElementsByClassName('player')
+const dealerCards = document.querySelector('.dealer')
+const playerCards = document.querySelector('.player')
 const firstDealerCard = document.getElementById('d-card-1')
 const secondDealerCard = document.getElementById('d-card-2')
 const firstPlayerCard = document.getElementById('p-card-1')
@@ -25,6 +25,9 @@ const hit = document.querySelector('.hit')
 const stand = document.querySelector('.stand')
 let dealerSum = document.getElementsByClassName('dealer-sum')
 let playerSum = document.querySelector('.player-sum')
+let hitStand = document.querySelector('.hit-stand')
+const promptChips = document.querySelector('#prompt-chips')
+const chipsSection = document.querySelector('.chips-section')
 
 // Cards
 const backOfCard =
@@ -257,10 +260,20 @@ const startGame = () => {
   secondDealerCard.innerHTML = randomCard1
   firstPlayerCard.innerHTML = randomCard2
   secondPlayerCard.innerHTML = randomCard3
+  hitStand.style.opacity = 1
+  dealerCards.style.opacity = 1
+  playerCards.style.opacity = 1
+  promptChips.style.opacity = 0
+  chipsSection = 0.5
   scoreDisplayAce()
 }
 const startOver = () => {
   amount = 0
+  hitStand.style.opacity = 0
+  dealerCards.style.opacity = 0
+  playerCards.style.opacity = 0
+  promptChips.style.opacity = 1
+  chipsSection = 1
   firstDealerCard.innerHTML = ' '
   secondDealerCard.innerHTML = ' '
   firstPlayerCard.innerHTML = ' '

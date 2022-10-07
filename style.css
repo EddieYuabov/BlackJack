@@ -8,18 +8,19 @@ body{
     grid-template-rows: 300px 1fr 400px 175px;
     margin: 0;
 }
-#return-link{
-display: inline;
+#prompt-chips{
+    font-size: 20px;
+    padding:10px;
+    opacity: 1;
 }
-#play-again{
-    cursor:pointer;
-}
+
 .dealer{
     display: flex;
     margin: auto;
     grid-gap: 5px;
     justify-content: center;
     align-items: center;
+    opacity:0;
 }
 .chips{
     display: flex;
@@ -29,7 +30,7 @@ display: inline;
     grid-row: span 3;
     color:white;
     background-color: rgb(0, 0, 0,.5);
-    filter:opacity(100%);
+    opacity: 1;
     justify-content: center;
     align-items: center;
 }
@@ -58,6 +59,7 @@ display: inline;
     grid-gap: 5px;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 
 /* .player-card-1{
@@ -73,16 +75,17 @@ display: inline;
 } */
 
 .you-win{
-    background-color: rgb(0, 93, 0,.5);
-    color:white;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(0, 93, 0,0.5);
+    color:white;
     grid-column: span 2;
 }
 
 .hit-stand{
     padding-left: 150px;
+    opacity: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
